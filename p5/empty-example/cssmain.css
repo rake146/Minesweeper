@@ -1,0 +1,57 @@
+.title h1{ 
+    font-size: 100;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+html, body {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+
+    /* This centers our sketch vertically. */
+    align-items: center;
+
+    padding: 0;
+}
+
+.bg-color-dark{
+    background-color: #121212 !important;
+}
+
+.title-color-dark{
+    color: #D6D6D6 !important; 
+}
+
+.soduku-stats{
+    float: right;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    position: absolute;
+}
+
+.grid-status{
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.soduku-grid{
+    display: inline-block;
+}
+/* Styling can be added by default using the defaultCanvas0 tag
+#defaultCanvas0{
+    margin-left: 100px;
+}*/
