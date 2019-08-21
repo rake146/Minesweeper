@@ -25,8 +25,15 @@ class Grid {
       }
   }
 
-  getRandomInt(max) {
+  getRandomInt(max){
     return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  addNumbers(){
+    for (var i = 0; i < 9; i++)
+      for (var j = 0; j < 9; j++){
+        this.cells[i][j] = new cell(i, j);
+      }
   }
   
 }
@@ -36,12 +43,18 @@ class cell {
     this.positionX = positionX;
     this.positionY = positionY;
     this.bomb = false;
+    this.value = 0;
   }
 
+  setValue(val){
+    this.value = val;
+  }
+  getValue(){
+    return this.value;
+  }
   setBomb(val){
     this.bomb = val;
   }
-
   getBomb(){
     return this.bomb;
   }
@@ -68,6 +81,7 @@ function setup() {
   var canvas = createCanvas(500, 500);
 
   grid.addBombs();
+  //grid.addNumbers();
 }
 
 function draw() {
